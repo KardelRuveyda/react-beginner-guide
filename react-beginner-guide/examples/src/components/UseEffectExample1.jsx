@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function UseEffectExample1() {
-  const [count, setCount] = useState(0);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+
+  useEffect(() => {
+    console.log('Her zaman çalışır');
+  });
 
   return (
     <div>
-      <p>You clicked {count} times</p>
-      {/* Butona tıklandığında setCount fonksiyonunu çağırarak count state'ini güncelliyoruz */}
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
+      <p>First Name: {firstName}</p>
+      <p>Last Name: {lastName}</p>
+      <button onClick={() => setFirstName('John')}>Change First Name</button>
+      <button onClick={() => setLastName('Doe')}>Change Last Name</button>
     </div>
   );
 }
