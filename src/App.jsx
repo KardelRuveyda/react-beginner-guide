@@ -1,5 +1,5 @@
 import './App.css'
-// import JsxComponent from './components/JsxComponent';
+import JsxComponent from './components/JsxComponent';
 import NumbersComponent from './components/NumbersComponent';
 import CssComponent from './components/CssComponent';
 import Login from './components/Login';
@@ -9,9 +9,6 @@ import FunctionalComponent from './components/FunctionalComponent';
 import Button from './components/Button';
 import ButtonJS from './components/ButtonJS';
 import PropsProductComponent from './components/PropsProductComponent';
-import UseEffectExample1 from './components/UseEffectExample1';
-import UseEffectExample2 from './components/UseEffectExample2';
-import UseEffectExample3 from './components/UseEffectExample3';
 
 function App() {
   const products = [
@@ -23,7 +20,8 @@ function App() {
   return (
     <div>
       <div>
-        <PropsProductComponent products={products} />;
+        <JsxComponent />
+        {/* <ProductList products={products} />; */}
       </div>
     </div>
   );
